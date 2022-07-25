@@ -9,7 +9,7 @@ if 'dev_mode' not in st.session_state:
     st.session_state.dev_mode = False
 
 if 'csv_filepath' not in st.session_state:
-    st.session_state['csv_filepath'] = "/Users/timothywee/Documents/SUTD Term 5/HCI and AI/Week 10/Smart Pomodoro/HCI-and-AI-smart-pomodoro/Production/actual_HCI_data.csv"
+    st.session_state['csv_filepath'] = "actual_HCI_data.csv"
 
 st.header("Settings")
 
