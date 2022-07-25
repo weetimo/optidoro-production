@@ -13,5 +13,5 @@ st.write("If you get errors about the CSV filepath, there's a no-code fix in set
 st.write("There's also a working function to add new subjects in settings.")
 st.write("Need the timer to run faster? Enable dev mode in settings.")
 
-st.caption("Built by Timothy Wee, Group 7, for HCI and AI.")
+st.caption("Optidoro is built by Timothy Wee, with some help from Noah Kong, for HCI and AI, Group 7.")
 st.caption("You may contact him at timothy_wee@mymail.sutd.edu.sg for any questions.")
