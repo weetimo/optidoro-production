@@ -1,6 +1,7 @@
 
 
 import streamlit as st
+import pandas as pd
 
 if 'subject_array' not in st.session_state:
     st.session_state['subject_array'] = subject_array = ["Machine Learning", "HCI and AI", "Service Design Studio", "HASS"]
@@ -37,7 +38,10 @@ st.caption("Makes timer run faster for testing purposes.")
 
 if st.session_state.dev_mode == True:
     st.session_state['multiplier'] = 0.001
-    #st.write(df)
+    #display CSV file
+    df = pd.read_csv(st.session_state.csv_filepath)
+    st.write(df)
+    st.write(st.experimental_user)
 
 if st.session_state.dev_mode == False:
     st.session_state['multiplier'] = 1
