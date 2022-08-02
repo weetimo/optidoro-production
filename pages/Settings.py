@@ -22,13 +22,7 @@ with st.form("Add new subject:"):
             st.session_state.subject_array.append(new_subject)
             st.success("New subject added!")
 
-# with st.form("CSV filepath:"):
-#     st.caption("If you're getting errors about the CSV filepath, try changing the filepath to a local filepath.")
-#     st.caption("Enter your filepath here and click submit.")
-#     st.caption("Just filepath only, no quotation marks.")
-#     csv_filepath = st.text_input("CSV filepath:")
-#     submitted = st.form_submit_button("Submit")
-    
+
 #     if submitted:
 #         st.session_state.csv_filepath = csv_filepath
 #         st.success("CSV filepath updated!")
@@ -41,7 +35,14 @@ if st.session_state.dev_mode == True:
     #display CSV file
     df = pd.read_csv(st.session_state.csv_filepath)
     st.write(df)
-    st.write(st.experimental_user)
+    st.write(st.experimental_user)    
 
 if st.session_state.dev_mode == False:
     st.session_state['multiplier'] = 1
+
+with st.form("CSV filepath:"):
+    st.caption("If you're getting errors about the CSV filepath, try changing the filepath to a local filepath.")
+    st.caption("Enter your filepath here and click submit.")
+    st.caption("Just filepath only, no quotation marks.")
+    st.session_state['csv_filepath'] = st.text_input("CSV filepath:")
+    submitted = st.form_submit_button("Submit")
